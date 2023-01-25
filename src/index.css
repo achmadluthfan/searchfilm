@@ -5,6 +5,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -12,6 +13,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+}
+
+.container::-webkit-scrollbar {
+  height: 100px;
+  width: 100px;
 }
 
 .Overlay {
@@ -161,7 +167,7 @@ p.text-title {
 
 /* DETAILS DATA SECTION*/
 .Details-Data {
-  position: fixed;
+  position: absolute;
   max-width: 80vw;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -172,6 +178,8 @@ p.text-title {
   transition: all .5s;
   z-index: -1;
   opacity: 0;
+  min-height: fit-content;
+  scroll-behavior: smooth;
 }
 
 
@@ -180,6 +188,8 @@ p.text-title {
   display: block;
   margin: 0 auto 20px;
   border-radius: 5px;
+  height: 20%;
+  width: 100%;
 }
 
 .Details-Data table {
@@ -383,6 +393,10 @@ button {
 
   .footer p {
     font-size: 1rem;
+  }
+
+  .Details-Data img {
+    width: 50%;
   }
 }
 

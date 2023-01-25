@@ -14,6 +14,8 @@ function App() {
     setFormValueTemporary(event.target.value);
   }
 
+  
+
   useEffect(() => {
         fetch(`https://www.omdbapi.com/?apikey=fed84e1b&s=${finalDataQuery}`)
       .then(respone => respone.json())
@@ -42,6 +44,8 @@ function App() {
 
     },[finalDataQuery]);
  
+    
+
     const [status, setStatus] = useState(false);
     const [errorMessage, seterrorMessage] = useState("");
     const [welcome, setWelcome] = useState();

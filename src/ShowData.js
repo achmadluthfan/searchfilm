@@ -16,7 +16,11 @@ const ShowData = ({ dataSend }) => {
         detailsData.style.opacity = '1';
         detailsData.style.zIndex = '9999';
         overlay.style.display = 'block';
-        detailsData.style.top = '100px'
+        detailsData.style.top = '100px';
+
+        // window.style.transition = '2s'
+        window.scrollTo(0,100);
+
       }
 
 
@@ -50,7 +54,7 @@ const ShowData = ({ dataSend }) => {
               <p className="text-title">{data.Title}</p>
               <p className="text-year">{data.Year}</p>
             </div>
-            <button  className="card-button" data-imdbid={data.imdbID} onClick={detailsHanlde}>
+            <button className="card-button" data-imdbid={data.imdbID} onClick={detailsHanlde}>
               More info
             </button>
           </div>
