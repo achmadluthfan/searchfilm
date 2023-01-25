@@ -19,7 +19,6 @@ function App() {
       .then(respone => respone.json())
       .then(result => {
         if (result.Response === "False") {
-          console.log(result)
           throw new Error(result.Error);
         } else {
           setDatas(result.Search);
